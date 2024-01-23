@@ -1,0 +1,1514 @@
+
+kboshard@TECH-11L-LA MINGW64 ~
+$ ls
+'3D Objects'/            ntuser.dat.LOG1
+ AppData/                ntuser.dat.LOG2
+'Application Data'@      NTUSER.DAT{a2332f18-cdbf-11ec-8680-002248483d79}.TM.blf
+ battery-report.html     NTUSER.DAT{a2332f18-cdbf-11ec-8680-002248483d79}.TMContainer00000000000000000001.regtrans-ms
+ command.tmp             NTUSER.DAT{a2332f18-cdbf-11ec-8680-002248483d79}.TMContainer00000000000000000002.regtrans-ms
+ Contacts/               ntuser.ini
+ Cookies@                OneDrive/
+ Desktop/               'OneDrive - Burlington'/
+ Documents/              PrintHood@
+ Downloads/              Random/
+ Favorites/              Recent@
+ GlobalProtectLogs.zip   regval.tmp
+ Links/                 'Saved Games'/
+'Local Settings'@        Searches/
+ Microsoft/              SendTo@
+ Music/                 'Start Menu'@
+'My Documents'@          Templates@
+ NetHood@                tracert
+ NTUSER.DAT              Videos/
+
+kboshard@TECH-11L-LA MINGW64 ~
+$ cd Desktop/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ ls
+MerchToolbox/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git --help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git config --global user.name "theboshack"
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git config --global user.email "kboshardy@gmail.com"
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git config --global core.editor "nano -w"
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git config --global init.defaultBranch main
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git config --global --edit
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git config --global --edit
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ mkdir planets
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ cd planets/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets
+$ ls
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets
+$ git init
+Initialized empty Git repository in C:/Users/kboshard/Desktop/planets/.git/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls -a
+./  ../  .git/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout -b main
+Switched to a new branch 'main'
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status --help
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls
+mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   mars.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Started notes on Mars as a base"
+[main (root-commit) 134e70c] Started notes on Mars as a base
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log
+commit 134e70c1bf0bc9e3cee51f43d047f29ececdfb6f (HEAD -> main)
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:25:55 2024 -0800
+
+    Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index df0654a..e4d197b 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,3 @@
+ Cold and dry, but everything is my favorite color
++The two moons may be a problem for Wolfman
++
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Added concerns for wolfman on Mars due to multiple moons"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Added concerns for wolfman on Mars due to multiple moons"
+[main 5a3ba61] Added concerns for wolfman on Mars due to multiple moons
+ 1 file changed, 2 insertions(+)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # git commit -a; # git commit --all
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # the above commits all changes
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index e4d197b..6d33988 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
++But the Mummy will appreciate the lack of humidity
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff --staged
+diff --git a/mars.txt b/mars.txt
+index e4d197b..6d33988 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
++But the Mummy will appreciate the lack of humidity
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Added notes about benefits for Mummy: good climate, low humidity"
+[main a24a65a] Added notes about benefits for Mummy: good climate, low humidity
+ 1 file changed, 1 insertion(+)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log
+commit a24a65aaa613b34876cc56128d41cdd244348e31 (HEAD -> main)
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:40:56 2024 -0800
+
+    Added notes about benefits for Mummy: good climate, low humidity
+
+commit 5a3ba619dc62ccfada3fac4fcd09b6acfd4fa89d
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:34:36 2024 -0800
+
+    Added concerns for wolfman on Mars due to multiple moons
+
+commit 134e70c1bf0bc9e3cee51f43d047f29ececdfb6f
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:25:55 2024 -0800
+
+    Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log -1
+commit a24a65aaa613b34876cc56128d41cdd244348e31 (HEAD -> main)
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:40:56 2024 -0800
+
+    Added notes about benefits for Mummy: good climate, low humidity
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log -2
+commit a24a65aaa613b34876cc56128d41cdd244348e31 (HEAD -> main)
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:40:56 2024 -0800
+
+    Added notes about benefits for Mummy: good climate, low humidity
+
+commit 5a3ba619dc62ccfada3fac4fcd09b6acfd4fa89d
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:34:36 2024 -0800
+
+    Added concerns for wolfman on Mars due to multiple moons
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline
+a24a65a (HEAD -> main) Added notes about benefits for Mummy: good climate, low humidity
+5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline --graph
+* a24a65a (HEAD -> main) Added notes about benefits for Mummy: good climate, low humidity
+* 5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+* 134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cd ..
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ mkdir spaceships
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ cd spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ cd..
+bash: cd..: command not found
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ git add spaceships
+fatal: not a git repository (or any of the parent directories): .git
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ # the above failed lines are indicating we are outside of our git repository, and the git commands will not work
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ cd..
+bash: cd..: command not found
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ ls
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ cd..
+bash: cd..: command not found
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/spaceships
+$ cd ..
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ cd planets/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ mkdir spaceships
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls
+mars.txt  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls -a
+./  ../  .git/  mars.txt  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cd .git/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets/.git (GIT_DIR!)
+$ ls
+COMMIT_EDITMSG  config  description  HEAD  hooks/  index  info/  logs/  objects/  refs/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets/.git (GIT_DIR!)
+$ nano .gitkeep
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets/.git (GIT_DIR!)
+$ ls
+COMMIT_EDITMSG  config  description  HEAD  hooks/  index  info/  logs/  objects/  refs/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets/.git (GIT_DIR!)
+$ cd ..
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ touch spaceships/apollo-11.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spaceships/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # git only paid attention to spaceships directory when we added a file inside it
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   spaceships/apollo-11.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commmit -m "Adding some additional notes on spaceships: Apollo 11"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Adding some additional notes on spaceships: Apollo 11"
+[main b3681ce] Adding some additional notes on spaceships: Apollo 11
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 spaceships/apollo-11.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # adding a directory helps you add a bunch of files at once
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # so would doing: git add *.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ touch spaceships/tempmissile.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spaceships/tempmissile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   spaceships/tempmissile.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ rm spaceships/tempmissile.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   spaceships/tempmissile.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    spaceships/tempmissile.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add spaceships/tempmissile.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # the deleted: status in red was git telling us it is freaking out because it does not see that file anymore, are we sure about this?
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # if you're sure you meant to delete it, then do: git add spaceships/tempmissile.txt and that will clear the git status
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano spaceships/apollo-11.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spaceships/apollo-11.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index 6d33988..f304ef6 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,4 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
+ But the Mummy will appreciate the lack of humidity
+-
++But it's cold!!
+diff --git a/spaceships/apollo-11.txt b/spaceships/apollo-11.txt
+index e69de29..1112c44 100644
+--- a/spaceships/apollo-11.txt
++++ b/spaceships/apollo-11.txt
+@@ -0,0 +1,2 @@
++Apollo, ready for launch!
++
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+        modified:   spaceships/apollo-11.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index 6d33988..f304ef6 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,4 +1,4 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
+ But the Mummy will appreciate the lack of humidity
+-
++But it's cold!!
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff spaceships/apollo-11.txt
+warning: in the working copy of 'spaceships/apollo-11.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/spaceships/apollo-11.txt b/spaceships/apollo-11.txt
+index e69de29..1112c44 100644
+--- a/spaceships/apollo-11.txt
++++ b/spaceships/apollo-11.txt
+@@ -0,0 +1,2 @@
++Apollo, ready for launch!
++
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+        modified:   spaceships/apollo-11.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --[no-]dry-run    dry run
+    -v, --[no-]verbose    be verbose
+
+    -i, --[no-]interactive
+                          interactive picking
+    -p, --[no-]patch      select hunks interactively
+    -e, --[no-]edit       edit current diff and apply
+    -f, --[no-]force      allow adding otherwise ignored files
+    -u, --[no-]update     update tracked files
+    --[no-]renormalize    renormalize EOL of tracked files (implies -u)
+    -N, --[no-]intent-to-add
+                          record only the fact that the path will be added later
+    -A, --[no-]all        add changes from all tracked and untracked files
+    --[no-]ignore-removal ignore paths removed in the working tree (same as --no-all)
+    --[no-]refresh        don't add, only refresh the index
+    --[no-]ignore-errors  just skip files which cannot be added because of errors
+    --[no-]ignore-missing check if - even missing - files are ignored in dry run
+    --[no-]sparse         allow updating entries outside of the sparse-checkout cone
+    --[no-]chmod (+|-)x   override the executable bit of the listed files
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+        modified:   spaceships/apollo-11.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit --all
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spaceships/apollo-11.txt', LF will be replaced by CRLF the next time Git touches it
+Aborting commit due to empty commit message.
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit --all
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spaceships/apollo-11.txt', LF will be replaced by CRLF the next time Git touches it
+[main c97ce5d] "Added Apollo status and Mars info"
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log
+commit c97ce5d1ff6073055c4fda7d064d2c4cca488e7b (HEAD -> main)
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 14:01:56 2024 -0800
+
+    "Added Apollo status and Mars info"
+
+commit b3681ced245e215aef92debf0173083080dd4581
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:52:27 2024 -0800
+
+    Adding some additional notes on spaceships: Apollo 11
+
+commit a24a65aaa613b34876cc56128d41cdd244348e31
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:40:56 2024 -0800
+
+    Added notes about benefits for Mummy: good climate, low humidity
+
+commit 5a3ba619dc62ccfada3fac4fcd09b6acfd4fa89d
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:34:36 2024 -0800
+
+    Added concerns for wolfman on Mars due to multiple moons
+
+commit 134e70c1bf0bc9e3cee51f43d047f29ececdfb6f
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:25:55 2024 -0800
+
+    Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ n^C
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff HEAD mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index f304ef6..980a941 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -2,3 +2,4 @@ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
+ But the Mummy will appreciate the lack of humidity
+ But it's cold!!
++An ill-considered change
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # if we want to go back two commits
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff HEAD~2 mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index 6d33988..980a941 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,4 +1,5 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
+ But the Mummy will appreciate the lack of humidity
+-
++But it's cold!!
++An ill-considered change
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ get diff HEAD~4 mars.txt
+bash: get: command not found
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff HEAD~4 mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index df0654a..980a941 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,5 @@
+ Cold and dry, but everything is my favorite color
++The two moons may be a problem for Wolfman
++But the Mummy will appreciate the lack of humidity
++But it's cold!!
++An ill-considered change
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # the above shows us the difference from 4 commits ago
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline --graph
+* c97ce5d (HEAD -> main) "Added Apollo status and Mars info"
+* b3681ce Adding some additional notes on spaceships: Apollo 11
+* a24a65a Added notes about benefits for Mummy: good climate, low humidity
+* 5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+* 134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # HEAD or HEAD~1 is the most recent commit, HEAD~12 is 12 commits ago
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff 5a3ba61 mars.txt
+warning: in the working copy of 'mars.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/mars.txt b/mars.txt
+index e4d197b..980a941 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,5 @@
+ Cold and dry, but everything is my favorite color
+ The two moons may be a problem for Wolfman
+-
++But the Mummy will appreciate the lack of humidity
++But it's cold!!
++An ill-considered change
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # the above string is referring to that commmit, you can directly call on that one to show its commit
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout HEAD mars.txt
+Updated 1 path from debccfb
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+But it's cold!!
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # Notice there is no more line at the bottom "An ill-considered change", we've reverted to the commit before it
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline
+c97ce5d (HEAD -> main) "Added Apollo status and Mars info"
+b3681ce Adding some additional notes on spaceships: Apollo 11
+a24a65a Added notes about benefits for Mummy: good climate, low humidity
+5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout 134e70c mars.txt
+Updated 1 path from 12125a8
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # We're now back to the one line on mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline
+c97ce5d (HEAD -> main) "Added Apollo status and Mars info"
+b3681ce Adding some additional notes on spaceships: Apollo 11
+a24a65a Added notes about benefits for Mummy: good climate, low humidity
+5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git diff --staged mars.txt
+diff --git a/mars.txt b/mars.txt
+index f304ef6..df0654a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,4 +1 @@
+ Cold and dry, but everything is my favorite color
+-The two moons may be a problem for Wolfman
+-But the Mummy will appreciate the lack of humidity
+-But it's cold!!
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # you can do git checkout 5a3ba61 and that would check out an entire early repository commit (overriding everything ba
+ck to that earlier commit)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout 5a3ba61
+error: Your local changes to the following files would be overwritten by checkout:
+        mars.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout 5a3ba61
+error: Your local changes to the following files would be overwritten by checkout:
+        mars.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Added changes during class"
+[main 6e6606c] Added changes during class
+ 1 file changed, 3 deletions(-)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout 5a3ba61
+Note: switching to '5a3ba61'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets ((5a3ba61...))
+$ git checkout main
+Previous HEAD position was 5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+Switched to branch 'main'
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # When using git checkout, you can only scale back to your commits, not any other time
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # git checkout HEAD mars.txt brings you back to the most recent commit for mars.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline
+6e6606c (HEAD -> main) Added changes during class
+c97ce5d "Added Apollo status and Mars info"
+b3681ce Adding some additional notes on spaceships: Apollo 11
+a24a65a Added notes about benefits for Mummy: good climate, low humidity
+5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout 6e6606c mars.txt
+Updated 0 paths from ec70598
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git checkout c97ce5d mars.txt
+Updated 1 path from debccfb
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+But it's cold!!
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   mars.txt
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log
+commit 6e6606cb42251d1d34a11790b4d32b98d630cbcd (HEAD -> main)
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 14:18:21 2024 -0800
+
+    Added changes during class
+
+commit c97ce5d1ff6073055c4fda7d064d2c4cca488e7b
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 14:01:56 2024 -0800
+
+    "Added Apollo status and Mars info"
+
+commit b3681ced245e215aef92debf0173083080dd4581
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:52:27 2024 -0800
+
+    Adding some additional notes on spaceships: Apollo 11
+
+commit a24a65aaa613b34876cc56128d41cdd244348e31
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:40:56 2024 -0800
+
+    Added notes about benefits for Mummy: good climate, low humidity
+
+commit 5a3ba619dc62ccfada3fac4fcd09b6acfd4fa89d
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:34:36 2024 -0800
+
+    Added concerns for wolfman on Mars due to multiple moons
+
+commit 134e70c1bf0bc9e3cee51f43d047f29ececdfb6f
+Author: theboshack <kboshardy@gmail.com>
+Date:   Sun Jan 21 13:25:55 2024 -0800
+
+    Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline
+6e6606c (HEAD -> main) Added changes during class
+c97ce5d "Added Apollo status and Mars info"
+b3681ce Adding some additional notes on spaceships: Apollo 11
+a24a65a Added notes about benefits for Mummy: good climate, low humidity
+5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git revert 6e6606c
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Saving mars.txt to have most up to date information"
+[main c07b82b] Saving mars.txt to have most up to date information
+ 1 file changed, 3 insertions(+)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git revert 6e6606c
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.t
+cat: mars.t: No such file or directory
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat mars.txt
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+But it's cold!!
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git revert b3681ce
+CONFLICT (modify/delete): spaceships/apollo-11.txt deleted in parent of b3681ce (Adding some additional notes on spaceships: Apollo 11) and modified in HEAD.  Version HEAD of spaceships/apollo-11.txt left in tree.
+error: could not revert b3681ce... Adding some additional notes on spaceships: Apollo 11
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main|REVERTING)
+$ git commit -m "reverting back to version b3681ce"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       spaceships/apollo-11.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main|REVERTING)
+$ git add spaceships/apollo-11.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main|REVERTING)
+$ git commit -m "reverting back to version b3681ce"
+On branch main
+You are currently reverting commit b3681ce.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main|REVERTING)
+$ git revert --continue
+On branch main
+You are currently reverting commit b3681ce.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main|REVERTING)
+$ git revert --abort
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline
+c07b82b (HEAD -> main) Saving mars.txt to have most up to date information
+6e6606c Added changes during class
+c97ce5d "Added Apollo status and Mars info"
+b3681ce Adding some additional notes on spaceships: Apollo 11
+a24a65a Added notes about benefits for Mummy: good climate, low humidity
+5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git statuts
+git: 'statuts' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # Above, we tried reverting to an older version of this project, but were having trouble, but git checkout works out w
+ell when you want to checkout a file, edit it, then commit it again
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # There are many times we want to have directories or files we want to use but git shouldn't track them
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ mdir results
+bash: mdir: command not found
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ touch a.csv b.csv c.csv results/a.out results/b.out
+touch: cannot touch 'results/a.out': No such file or directory
+touch: cannot touch 'results/b.out': No such file or directory
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ mkdir results
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ touch a.csv b.csv c.csv results/a.out results/b.out
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a.csv
+        b.csv
+        c.csv
+        results/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # Say, we don't want to track these files and directory
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # It could be because we don't want to see them show in git status or they are not related to our work
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano .gitignore
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls
+a.csv  b.csv  c.csv  mars.txt  results/  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add a.csv
+The following paths are ignored by one of your .gitignore files:
+a.csv
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # refer to the hints above for ways to force git to add a.csv even though we explicitly told it not to
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ nano .gitignore
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git add .gitignore
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git commit -m "Added a .gitignore hidden directory for files or directories to be ignored"
+[main 07670f4] Added a .gitignore hidden directory for files or directories to be ignored
+ 1 file changed, 5 insertions(+)
+ create mode 100644 .gitignore
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ssh git@github.com
+The authenticity of host 'github.com (140.82.112.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git remote add origin git@github.com:theboshack/planets.git
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git remote -v
+origin  git@github.com:theboshack/planets.git (fetch)
+origin  git@github.com:theboshack/planets.git (push)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # this adds the git repository but we are still not connected yet
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls -al ~/.ssh
+total 17
+drwxr-xr-x 1 kboshard 1049089  0 Jan 21 15:25 ./
+drwxr-xr-x 1 kboshard 1049089  0 Jan 21 15:25 ../
+-rw-r--r-- 1 kboshard 1049089 92 Jan 21 15:25 known_hosts
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ssh-keygen -t ed25519 -C "kboshardy@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/kboshard/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/kboshard/.ssh/id_ed25519
+Your public key has been saved in /c/Users/kboshard/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:Zr4RdzYdy53TInwSyDS2ElLc00ZeoKRf1AfE48+a+uM kboshardy@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|      .oo.=o+=+. |
+|       ..BoBo.+ .|
+|        o =o+..o |
+|         o o +.+o|
+|        S o B *=o|
+|       + o o = .+|
+|        o      o |
+|         o    +  |
+|        .   .+E. |
++----[SHA256]-----+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ssh-keygen -t ed25519 -C "kboshardy@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/kboshard/.ssh/id_ed25519):
+/c/Users/kboshard/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/kboshard/.ssh/id_ed25519
+Your public key has been saved in /c/Users/kboshard/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:Tk4/RmxiTckcJqxMao0fkLsQLXIE3vfEEiRrUtqXJqg kboshardy@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|.o.+.+ .. o      |
+|o X * = .= o     |
+| B O # +  =      |
+|. + X O  +       |
+|E  o o oS =      |
+|    . .* =       |
+|        o +      |
+|         . .     |
+|                 |
++----[SHA256]-----+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # This appears twice because I pressed enter without entering ANY passphrase the first time, I put my Grey Knights pas
+sword in to the second one and it's good to go
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # NEVER put the identification key on github
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # You can put the public key on github if need be
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls -al ~/.ssh
+total 23
+drwxr-xr-x 1 kboshard 1049089   0 Jan 21 15:34 ./
+drwxr-xr-x 1 kboshard 1049089   0 Jan 21 15:25 ../
+-rw-r--r-- 1 kboshard 1049089 464 Jan 21 15:35 id_ed25519
+-rw-r--r-- 1 kboshard 1049089 101 Jan 21 15:35 id_ed25519.pub
+-rw-r--r-- 1 kboshard 1049089  92 Jan 21 15:25 known_hosts
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ssh -T git@github.com
+git@github.com: Permission denied (publickey).
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAbYRiPCcAf0FfQRIhZxT5G0aFj8+NKykkei0bRVpH9/ kboshardy@gmail.com
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ssh -T git@github.com
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+Hi theboshack! You've successfully authenticated, but GitHub does not provide shell access.
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ pwd
+/c/Users/kboshard/Desktop/planets
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git push origin main
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (24/24), 2.27 KiB | 388.00 KiB/s, done.
+Total 24 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:theboshack/planets.git
+ * [new branch]      main -> main
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git pull origin main
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+From github.com:theboshack/planets
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git pull main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git pull
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.02 KiB | 116.00 KiB/s, done.
+From github.com:theboshack/planets
+   07670f4..137d443  main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls
+a.csv  b.csv  c.csv  mars.txt  results/  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git pull origin main
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+From github.com:theboshack/planets
+ * branch            main       -> FETCH_HEAD
+Updating 07670f4..137d443
+Fast-forward
+ random_something | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 random_something
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ ls
+a.csv  b.csv  c.csv  mars.txt  random_something  results/  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ git log --oneline
+137d443 (HEAD -> main, origin/main) Create random_something
+07670f4 Added a .gitignore hidden directory for files or directories to be ignored
+c07b82b Saving mars.txt to have most up to date information
+6e6606c Added changes during class
+c97ce5d "Added Apollo status and Mars info"
+b3681ce Adding some additional notes on spaceships: Apollo 11
+a24a65a Added notes about benefits for Mummy: good climate, low humidity
+5a3ba61 Added concerns for wolfman on Mars due to multiple moons
+134e70c Started notes on Mars as a base
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # This was to pull data we made on Github
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ # Now we are sharing data on github
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets (main)
+$ cd ..
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ git clone git@github.com:Tiff-YC/planets.git ./planets_collaboration
+Cloning into './planets_collaboration'...
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 20 (delta 4), reused 16 (delta 3), pack-reused 0
+Receiving objects: 100% (20/20), done.
+Resolving deltas: 100% (4/4), done.
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ ls
+MerchToolbox/  planets/  planets_collaboration/  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop
+$ cd planets_collaboration/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ ls
+mars.txt  random  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ nano pluto.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ ls
+mars.txt  pluto.txt  random  spaceships/
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pluto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ git add pluto.txt
+warning: in the working copy of 'pluto.txt', LF will be replaced by CRLF the next time Git touches it
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ git commit -m "Adding pluto information and endorsement for destination"
+[main df3c662] Adding pluto information and endorsement for destination
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pluto.txt
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ git push origin main
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 345.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Tiff-YC/planets.git
+   012ebde..df3c662  main -> main
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ pull origin main
+bash: pull: command not found
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ git pull origin main
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+From github.com:Tiff-YC/planets
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ # When collaborating, it's always safest to do a git pull origin main to get the most up to date things before you com
+mit
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ git fetch origin main
+Enter passphrase for key '/c/Users/kboshard/.ssh/id_ed25519':
+From github.com:Tiff-YC/planets
+ * branch            main       -> FETCH_HEAD
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ # The above fetch gets the data but doesn't make the current head the one from the github site
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ # When dealing with conflicts, git is happiest when pulling first THEN committing (so you compile things first then pu
+sh the whole thing)
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ # But if a collaborator doesn't do that and you have already pushed, but git will try to merge it to its best abilitie
+s
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$ # Sometimes you have to manually say which files you want to keep/merge/leave out
+
+kboshard@TECH-11L-LA MINGW64 ~/Desktop/planets_collaboration (main)
+$
